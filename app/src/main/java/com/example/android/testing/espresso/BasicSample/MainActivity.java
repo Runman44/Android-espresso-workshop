@@ -22,6 +22,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.android.testing.espresso.BasicSample.test1.Test1Activity;
+
 /**
  * An {@link Activity} that gets a text string from the user and displays it back when the user
  * clicks on one of the two buttons. The first one shows it in the same activity and the second
@@ -62,7 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(ShowTextActivity.newStartIntent(this, text));
                 break;
             case R.id.activityDoubleTextBtn:
-                startActivity(DoubleTextActivity.newStartIntent(this, text));
+                startActivity(Test1Activity.newStartIntent(this, text));
                 break;
         }
     }

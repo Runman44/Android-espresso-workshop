@@ -1,4 +1,4 @@
-package com.example.android.testing.espresso.BasicSample;
+package com.example.android.testing.espresso.BasicSample.test1;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.android.testing.espresso.BasicSample.R;
+
 /**
  * A simple {@link Activity} that shows a message.
  */
-public class DoubleTextActivity extends Activity {
+public class Test1Activity extends Activity {
 
     public final static String KEY_EXTRA_MESSAGE =
             "com.example.android.testing.espresso.basicsample.MESSAGE";
@@ -29,14 +31,14 @@ public class DoubleTextActivity extends Activity {
     }
 
     /**
-     * Creates an {@link Intent} for {@link DoubleTextActivity} with the message to be displayed.
+     * Creates an {@link Intent} for {@link Test1Activity} with the message to be displayed.
      *
      * @param context the {@link Context} where the {@link Intent} will be used
      * @param message a {@link String} with text to be displayed
-     * @return an {@link Intent} used to start {@link DoubleTextActivity}
+     * @return an {@link Intent} used to start {@link Test1Activity}
      */
-    static Intent newStartIntent(Context context, String message) {
-        Intent newIntent = new Intent(context, DoubleTextActivity.class);
+    public static Intent newStartIntent(Context context, String message) {
+        Intent newIntent = new Intent(context, Test1Activity.class);
         newIntent.putExtra(KEY_EXTRA_MESSAGE, message);
         return newIntent;
     }
