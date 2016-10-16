@@ -41,13 +41,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/open_activity_and_change_text" />
+        android:text="Open Activity" />
 
     <Button
-        android:id="@+id/activityDoubleTextBtn"
+        android:id="@+id/test1"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/open_activity_and_change_text" />
+
 </LinearLayout>

@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         // Set the listeners for the buttons.
         findViewById(R.id.changeTextBt).setOnClickListener(this);
         findViewById(R.id.activityChangeTextBtn).setOnClickListener(this);
-        findViewById(R.id.activityDoubleTextBtn).setOnClickListener(this);
+        findViewById(R.id.test1).setOnClickListener(this);
 
         mTextView = (TextView) findViewById(R.id.textToBeChanged);
         mEditText = (EditText) findViewById(R.id.editTextUserInput);
@@ -63,7 +63,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.activityChangeTextBtn:
                 startActivity(ShowTextActivity.newStartIntent(this, text));
                 break;
-            case R.id.activityDoubleTextBtn:
+            case R.id.test1:
                 startActivity(Test1Activity.newStartIntent(this, text));
                 break;
         }
