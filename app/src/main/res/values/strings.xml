@@ -8,4 +8,5 @@
     <string name="change_text">Change text</string>
     <string name="type_something">type something…</string>
     <string name="open_activity_and_change_text">Test 1</string>
+    <string name="open_list">Test 2</string>
 </resources>

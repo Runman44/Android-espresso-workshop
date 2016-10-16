@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.example.android.testing.espresso.BasicSample.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Activity} that shows a message.
@@ -19,15 +23,23 @@ public class Test2Activity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_double_text);
+        setContentView(R.layout.activity_list);
 
         // Get the message from the Intent.
         Intent intent = getIntent();
         String message = intent.getStringExtra(KEY_EXTRA_MESSAGE);
 
-        // Show message.
-        ((TextView) findViewById(R.id.show_text_view_one)).setText(message);
-        ((TextView) findViewById(R.id.show_text_view_two)).setText(message);
+        //Fill List
+        List strings = new ArrayList();
+        strings.add(message);
+        strings.add(message);
+
+        // Show List
+        Test2ListAdapter adapter = new Test2ListAdapter(strings);
+
+        RecyclerView list = (RecyclerView) findViewById(R.id.test2_list);
+        list.setLayoutManager(new LinearLayoutManager(this));
+        list.setAdapter(adapter);
     }
 
     /**

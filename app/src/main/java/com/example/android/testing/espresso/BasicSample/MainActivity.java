@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.android.testing.espresso.BasicSample.test1.Test1Activity;
+import com.example.android.testing.espresso.BasicSample.test2.Test2Activity;
 
 /**
  * An {@link Activity} that gets a text string from the user and displays it back when the user
@@ -46,6 +47,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.changeTextBt).setOnClickListener(this);
         findViewById(R.id.activityChangeTextBtn).setOnClickListener(this);
         findViewById(R.id.test1).setOnClickListener(this);
+        findViewById(R.id.test2).setOnClickListener(this);
 
         mTextView = (TextView) findViewById(R.id.textToBeChanged);
         mEditText = (EditText) findViewById(R.id.editTextUserInput);
@@ -65,6 +67,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.test1:
                 startActivity(Test1Activity.newStartIntent(this, text));
+                break;
+            case R.id.test2:
+                startActivity(Test2Activity.newStartIntent(this, text));
                 break;
         }
     }
