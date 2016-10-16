@@ -40,6 +40,6 @@ public class Test1Test {
     // TODO make it right !
     @Test
     public void test1_newActivity_doubleText_passed() {
-        
+
     }
 }

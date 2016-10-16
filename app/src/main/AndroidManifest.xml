@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.testing.espresso.BasicSample.ShowTextActivity"/>
+        <activity android:name="com.example.android.testing.espresso.BasicSample.test1.Test1Activity"/>
+        <activity android:name="com.example.android.testing.espresso.BasicSample.test2.Test2Activity"/>
     </application>
 
 </manifest>
