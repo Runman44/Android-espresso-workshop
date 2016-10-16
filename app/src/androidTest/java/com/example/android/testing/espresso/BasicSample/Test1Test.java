@@ -31,7 +31,7 @@ public class Test1Test {
         // Type text and then press the button.
         onView(withId(R.id.editTextUserInput)).perform(typeText(STRING_TO_BE_TYPED),
                 closeSoftKeyboard());
-        onView(withId(R.id.activityChangeTextBtn)).perform(click());
+        onView(withId(R.id.test1)).perform(click());
 
         // Error on this line ! but why ?
         onView(withText("Espresso")).check(matches(isDisplayed()));
