@@ -20,6 +20,7 @@ import android.app.Activity
 import android.os.Bundle
 import com.example.android.testing.espresso.basicSample.test1.Test1Activity
 import com.example.android.testing.espresso.basicSample.test2.Test2Activity
+import com.example.android.testing.espresso.basicSample.test3.Test3Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -47,6 +48,10 @@ class MainActivity : Activity() {
 
         test2.setOnClickListener {
             startActivity(Test2Activity.newStartIntent(this, editTextUserInput.text.toString()))
+        }
+
+        test3.setOnClickListener {
+            startActivity(Test3Activity.newStartIntent(this, editTextUserInput.text.toString()))
         }
     }
 }

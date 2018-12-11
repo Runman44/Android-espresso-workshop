@@ -18,6 +18,7 @@
         <activity android:name="com.example.android.testing.espresso.basicSample.ShowTextActivity" />
         <activity android:name="com.example.android.testing.espresso.basicSample.test1.Test1Activity" />
         <activity android:name="com.example.android.testing.espresso.basicSample.test2.Test2Activity"/>
+        <activity android:name="com.example.android.testing.espresso.basicSample.test3.Test3Activity"/>
     </application>
 
 </manifest>
