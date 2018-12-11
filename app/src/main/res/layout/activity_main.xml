@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/header_margin"
         android:layout_marginTop="@dimen/header_margin"
+        android:layout_marginBottom="@dimen/header_margin"
         android:text="@string/hello_world"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -27,7 +27,7 @@
         android:hint="@string/type_something" />
 
     <Button
-        android:id="@+id/changeTextBt"
+        android:id="@+id/buttonChangeText"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
 
 
     <Button
-        android:id="@+id/activityChangeTextBtn"
+        android:id="@+id/buttonNewActivity"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,6 +58,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/open_list" />
-
 
 </LinearLayout>
