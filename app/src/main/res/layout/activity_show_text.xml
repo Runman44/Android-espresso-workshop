@@ -7,7 +7,7 @@
              tools:context=".ShowTextActivity">
 
     <TextView
-            android:id="@+id/show_text_view"
+            android:id="@+id/showTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hello_world"
