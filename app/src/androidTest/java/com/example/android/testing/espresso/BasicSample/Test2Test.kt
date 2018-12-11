@@ -47,6 +47,11 @@ class Test2Test {
     // TODO make it right !
     @Test
     fun test2_newActivity_list_passed() {
+        onView(withId(R.id.editTextUserInput)).perform(typeText("Espresso"),
+                closeSoftKeyboard())
+        onView(withId(R.id.test2)).perform(click())
 
+        // Error on this line ! but why ?
+        onView(withId(R.id.test2_text)).check(matches(withText("Espresso")))
     }
 }

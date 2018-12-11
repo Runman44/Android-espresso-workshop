@@ -33,9 +33,15 @@ class Test1Test {
         onView(withText("Espresso")).check(matches(isDisplayed()))
     }
 
-    // TODO make it right !
     @Test
     fun test1_newActivity_doubleText_passed() {
+        // Type text and then press the button.
+        onView(withId(R.id.editTextUserInput)).perform(typeText("Espresso"),
+                closeSoftKeyboard())
+        onView(withId(R.id.test1)).perform(click())
 
+        // Error on this line ! but why ?
+        onView(withId(R.id.show_text_view_one)).check(matches(withText("Espresso")))
+        onView(withId(R.id.show_text_view_two)).check(matches(withText("Espresso")))
     }
 }
