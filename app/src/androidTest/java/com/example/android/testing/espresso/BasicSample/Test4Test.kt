@@ -28,7 +28,7 @@ class Test4Test {
         val resultData = Intent()
         resultData.data = Uri.parse("something")
         val result = Instrumentation.ActivityResult(Activity.RESULT_OK, resultData)
-        
+
         intending(hasAction(Intent.ACTION_PICK)).respondWith(result)
 
         onView(withId(R.id.test4)).perform(click())
