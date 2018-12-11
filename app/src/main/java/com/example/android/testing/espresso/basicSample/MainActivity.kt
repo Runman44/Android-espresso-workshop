@@ -22,6 +22,7 @@ import com.example.android.testing.espresso.basicSample.test1.Test1Activity
 import com.example.android.testing.espresso.basicSample.test2.Test2Activity
 import com.example.android.testing.espresso.basicSample.test3.Test3Activity
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
 
 /**
  * An [Activity] that gets a text string from the user and displays it back when the user
@@ -52,6 +53,18 @@ class MainActivity : Activity() {
 
         test3.setOnClickListener {
             startActivity(Test3Activity.newStartIntent(this, editTextUserInput.text.toString()))
+        }
+
+        test4.setOnClickListener {
+            val photoPickerIntent = Intent(Intent.ACTION_PICK)
+            photoPickerIntent.type = "image/*"
+            startActivityForResult(photoPickerIntent, 1)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == 1) {
+            textToBeChanged.text = data?.data.toString()
         }
     }
 }
