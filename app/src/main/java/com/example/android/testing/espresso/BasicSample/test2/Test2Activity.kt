@@ -19,17 +19,18 @@ class Test2Activity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        // Get the message from the Intent.
-        val message = intent.getStringExtra(KEY_EXTRA_MESSAGE)
-
         //Fill List
         val strings = arrayListOf<String>()
-        strings.add(message)
-        strings.add(message)
+        strings.add("Espresso 1")
+        strings.add("Espresso 2")
 
         // Show List
         test2_list.layoutManager = LinearLayoutManager(this)
         test2_list.adapter = Test2ListAdapter(strings)
+
+        // Show List
+        test2_list_2.layoutManager = LinearLayoutManager(this)
+        test2_list_2.adapter = Test2ListAdapter(strings)
     }
 
     companion object {
