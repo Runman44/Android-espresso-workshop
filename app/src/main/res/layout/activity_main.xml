@@ -28,7 +28,7 @@
 
     <Button
             style="?android:attr/buttonStyleSmall"
-            android:id="@+id/changeTextBt"
+            android:id="@+id/buttonChangeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/change_text"
@@ -37,7 +37,7 @@
 
     <Button
             style="?android:attr/buttonStyleSmall"
-            android:id="@+id/activityChangeTextBtn"
+            android:id="@+id/buttonNewActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
