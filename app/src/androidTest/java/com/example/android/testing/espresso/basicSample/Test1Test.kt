@@ -2,6 +2,7 @@ package com.example.android.testing.espresso.basicSample
 
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
+import com.example.android.testing.espresso.basicSample.robots.MainRobot
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
