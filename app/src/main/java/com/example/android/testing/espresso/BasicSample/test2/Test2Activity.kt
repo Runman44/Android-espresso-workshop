@@ -4,10 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.android.testing.espresso.basicSample.R
-import kotlinx.android.synthetic.main.activity_list.*
 
 
 /**
@@ -18,19 +16,6 @@ class Test2Activity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
-
-        //Fill List
-        val strings = arrayListOf<String>()
-        strings.add("Espresso 1")
-        strings.add("Espresso 2")
-
-        // Show List
-        test2_list.layoutManager = LinearLayoutManager(this)
-        test2_list.adapter = Test2ListAdapter(strings)
-
-        // Show List
-        test2_list_2.layoutManager = LinearLayoutManager(this)
-        test2_list_2.adapter = Test2ListAdapter(strings)
     }
 
     companion object {
