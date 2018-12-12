@@ -47,10 +47,8 @@ class Test2Test {
 
     @Test
     fun test2_newActivity_list_passed() {
-        onView(withId(R.id.editTextUserInput)).perform(typeText("Espresso"),
-                closeSoftKeyboard())
         onView(withId(R.id.test2)).perform(click())
 
-        onView(allOf(withId(R.id.test2_list_2), withText("Espresso 1"))).check(matches(isDisplayed()))
+        onView(allOf(withId(R.id.text_test), withText("testing"))).check(matches(isDisplayed()))
     }
 }

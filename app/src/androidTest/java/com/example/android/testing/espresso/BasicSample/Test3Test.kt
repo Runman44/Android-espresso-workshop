@@ -14,7 +14,6 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
-import com.example.android.testing.espresso.basicSample.test2.Test2ListAdapter
 import com.example.android.testing.espresso.basicSample.test3.Test3Adapter
 import org.hamcrest.Description
 import org.hamcrest.Matcher
@@ -46,7 +45,7 @@ class Test3Test {
         // Type text and then press the button.
         onView(withId(R.id.editTextUserInput)).perform(typeText("Espresso"), closeSoftKeyboard())
         onView(withId(R.id.test3)).perform(click())
-        onView(withId(R.id.test2_list)).perform(RecyclerViewActions.scrollToHolder(withHolderTimeView("Espresso 49")))
+        onView(withId(R.id.test3_list)).perform(RecyclerViewActions.scrollToHolder(withHolderTimeView("Espresso 49")))
     }
 
     private fun withHolderTimeView(text: String): Matcher<RecyclerView.ViewHolder> {
