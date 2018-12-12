@@ -11,6 +11,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
+import org.hamcrest.CoreMatchers.allOf
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -44,14 +45,12 @@ class Test2Test {
         onView(withId(R.id.test2_text)).check(matches(withText("Espresso")))
     }
 
-    // TODO make it right !
     @Test
     fun test2_newActivity_list_passed() {
         onView(withId(R.id.editTextUserInput)).perform(typeText("Espresso"),
                 closeSoftKeyboard())
         onView(withId(R.id.test2)).perform(click())
 
-        // Error on this line ! but why ?
-        onView(withId(R.id.test2_text)).check(matches(withText("Espresso")))
+        onView(allOf(withId(R.id.test2_list_2), withText("Espresso 1"))).check(matches(isDisplayed()))
     }
 }

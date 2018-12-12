@@ -40,7 +40,6 @@ class Test1Test {
                 closeSoftKeyboard())
         onView(withId(R.id.test1)).perform(click())
 
-        // Error on this line ! but why ?
         onView(withId(R.id.show_text_view_one)).check(matches(withText("Espresso")))
         onView(withId(R.id.show_text_view_two)).check(matches(withText("Espresso")))
     }
