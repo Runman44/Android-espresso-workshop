@@ -7,8 +7,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.android.testing.espresso.basicSample.R
-import com.example.android.testing.espresso.basicSample.test2.Test2ListAdapter
-import kotlinx.android.synthetic.main.activity_list.*
+import kotlinx.android.synthetic.main.activity_list_3.*
 
 
 /**
@@ -18,7 +17,7 @@ class Test3Activity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list)
+        setContentView(R.layout.activity_list_3)
 
         // Get the message from the Intent.
         val message = intent.getStringExtra(KEY_EXTRA_MESSAGE)
@@ -30,8 +29,8 @@ class Test3Activity : Activity() {
         }
 
         // Show List
-        test2_list.layoutManager = LinearLayoutManager(this)
-        test2_list.adapter = Test2ListAdapter(strings)
+        test3_list.layoutManager = LinearLayoutManager(this)
+        test3_list.adapter = Test3Adapter(strings)
     }
 
     companion object {

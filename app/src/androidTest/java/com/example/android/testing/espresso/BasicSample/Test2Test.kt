@@ -30,7 +30,7 @@ class Test2Test {
         onView(withId(R.id.test2)).perform(click())
 
         // Error on this line ! but why ?
-        onView(withText("Espresso")).check(matches(isDisplayed()))
+        onView(withText("test")).check(matches(isDisplayed()))
     }
 
     @Test
@@ -41,7 +41,7 @@ class Test2Test {
         onView(withId(R.id.test2)).perform(click())
 
         // Error on this line ! but why ?
-        onView(withId(R.id.test2_text)).check(matches(withText("Espresso")))
+        onView(withId(R.id.text_test)).check(matches(withText("test")))
     }
 
     // TODO make it right !

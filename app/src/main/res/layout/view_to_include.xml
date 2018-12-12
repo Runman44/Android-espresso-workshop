@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ShowTextActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="testing" />
+        android:text="test" />
 
     <TextView
         android:id="@+id/text_testing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test" />
-
-    <include
-        layout="@layout/view_to_include"/>
+        android:text="testing" />
 
 </LinearLayout>
