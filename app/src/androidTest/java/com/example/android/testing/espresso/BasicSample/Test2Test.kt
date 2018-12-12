@@ -11,6 +11,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
+import org.hamcrest.CoreMatchers.allOf
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -44,9 +45,10 @@ class Test2Test {
         onView(withId(R.id.text_test)).check(matches(withText("test")))
     }
 
-    // TODO make it right !
     @Test
     fun test2_newActivity_list_passed() {
+        onView(withId(R.id.test2)).perform(click())
 
+        onView(allOf(withId(R.id.text_test), withText("testing"))).check(matches(isDisplayed()))
     }
 }
